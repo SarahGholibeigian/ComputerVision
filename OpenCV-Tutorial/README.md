@@ -1,3 +1,3 @@
-# Python OpenCV Tutorials
+# OpenCV-Python Tutorials
 
-[Cascade Classifier](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
+[OpenCV-Python Tutorials](https://docs.opencv.org/master/d6/d00/tutorial_py_root.html)
