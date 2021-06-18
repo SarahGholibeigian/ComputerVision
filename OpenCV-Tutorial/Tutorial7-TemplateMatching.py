@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 
+# open Xming!
+# first change environment to pycv
+# second run <export DISPLAY=:0> in Ubuntu
+
 img = cv2.resize(cv2.imread('assets/soccer_practice.jpg', 0), (0, 0), fx=0.8, fy=0.8)
 template = cv2.resize(cv2.imread('assets/shoe.PNG', 0), (0, 0), fx=0.8, fy=0.8)
 h, w = template.shape
@@ -18,7 +22,7 @@ for method in methods:
     else:
         location = max_loc
 
-    bottom_right = (location[0] + w, location[1] + h)    
+    bottom_right = (location[0] + w, location[1] + h)
     cv2.rectangle(img2, location, bottom_right, 255, 5)
     cv2.imshow('Match', img2)
     cv2.waitKey(0)

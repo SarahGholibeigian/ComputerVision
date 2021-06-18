@@ -1,12 +1,11 @@
 import numpy as np
 import cv2
 
+# open Xming!
 # first change environment to pycv
 # second run <export DISPLAY=:0> in Ubuntu
 
-################ Video
-
-cap = cv2.VideoCapture('./assets/video.mp4')
+cap = cv2.VideoCapture('./assets/face.mp4')
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
@@ -18,7 +17,7 @@ while True:
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 5)
-        roi_gray = gray[y:y+w, x:x+w]
+        roi_gray = gray[y:y+h, x:x+w]
         roi_color = frame[y:y+h, x:x+w]
         eyes = eye_cascade.detectMultiScale(roi_gray, 1.3, 5)
         for (ex, ey, ew, eh) in eyes:
