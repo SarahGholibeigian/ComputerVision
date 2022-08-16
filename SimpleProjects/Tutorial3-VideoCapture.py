@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 
+# open Xming!
 # first change environment to pycv
 # second run <export DISPLAY=:0> in Ubuntu
 

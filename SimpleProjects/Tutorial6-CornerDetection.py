@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 
+# open Xming!
+# first change environment to pycv
+# second run <export DISPLAY=:0> in Ubuntu
+
 img = cv2.imread('assets/chessboard.png')
 img = cv2.resize(img, (0, 0), fx=0.75, fy=0.75)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

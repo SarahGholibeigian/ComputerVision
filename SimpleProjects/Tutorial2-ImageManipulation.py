@@ -1,6 +1,7 @@
 import cv2
 import random
 
+# open Xming!
 # first change environment to pycv
 # second run <export DISPLAY=:0> in Ubuntu
 

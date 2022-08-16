@@ -1,10 +1,11 @@
 import numpy as np
 import cv2
 
+# open Xming!
 # first change environment to pycv
 # second run <export DISPLAY=:0> in Ubuntu
 
-cap = cv2.VideoCapture('video.mp4')
+cap = cv2.VideoCapture('./assets/video.mp4')
 
 while True:
     ret, frame = cap.read()
